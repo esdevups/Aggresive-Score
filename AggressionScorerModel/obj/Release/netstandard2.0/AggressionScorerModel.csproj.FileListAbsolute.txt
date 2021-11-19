@@ -1,0 +1,11 @@
+C:\Users\amir\Desktop\AggressionScorer\AggressionScorerModel\bin\Release\netstandard2.0\Model\AggressionScoreModel.zip
+C:\Users\amir\Desktop\AggressionScorer\AggressionScorerModel\bin\Release\netstandard2.0\Model\AggressionScoreRetrainedModel.zip
+C:\Users\amir\Desktop\AggressionScorer\AggressionScorerModel\bin\Release\netstandard2.0\AggressionScorerModel.deps.json
+C:\Users\amir\Desktop\AggressionScorer\AggressionScorerModel\bin\Release\netstandard2.0\AggressionScorerModel.dll
+C:\Users\amir\Desktop\AggressionScorer\AggressionScorerModel\bin\Release\netstandard2.0\AggressionScorerModel.pdb
+C:\Users\amir\Desktop\AggressionScorer\AggressionScorerModel\obj\Release\netstandard2.0\AggressionScorerModel.csprojAssemblyReference.cache
+C:\Users\amir\Desktop\AggressionScorer\AggressionScorerModel\obj\Release\netstandard2.0\AggressionScorerModel.AssemblyInfoInputs.cache
+C:\Users\amir\Desktop\AggressionScorer\AggressionScorerModel\obj\Release\netstandard2.0\AggressionScorerModel.AssemblyInfo.cs
+C:\Users\amir\Desktop\AggressionScorer\AggressionScorerModel\obj\Release\netstandard2.0\AggressionScorerModel.csproj.CoreCompileInputs.cache
+C:\Users\amir\Desktop\AggressionScorer\AggressionScorerModel\obj\Release\netstandard2.0\AggressionScorerModel.dll
+C:\Users\amir\Desktop\AggressionScorer\AggressionScorerModel\obj\Release\netstandard2.0\AggressionScorerModel.pdb

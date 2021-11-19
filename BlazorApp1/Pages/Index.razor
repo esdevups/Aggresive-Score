@@ -1,0 +1,87 @@
+﻿@page "/"
+
+@using AggressionScorerModel
+@using System.Diagnostics.Eventing.Reader
+@inject AggressionScore AggresiveScore
+
+<div class="d-flex flex-column">
+    <div class="col-12  ">
+        <textarea class="form-control" type="text" @bind="@Comment" @bind:event="oninput" @onchange="@OutPut" placeholder="Comment" />
+        <br />
+
+        <button class="btn btn-primary form-control">send</button>
+        <br />
+        <br />
+        <br />
+
+        <label>IsAggressive:</label>
+        <span>@IsAggressive</span>
+        <br />
+        <label>Probability:</label>
+        <span>@Probability</span>
+        <div class="progress w-100">
+            <div class="progress-bar progress-bar-striped progress-bar-animated @Color " role="progressbar" style="width: @valuerange%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">@Math.Ceiling(valuerange)%</div>
+        </div>
+        <br />
+ 
+    </div>
+    <div class="col-12 d-flex justify-content-around">
+        <span class="icon" style="">🥰</span>
+        <span class="icon" style="">🙂</span>
+        <span class="icon" style="">😐</span>
+        <span class="icon" style="">😑</span>
+        <span class="icon " style="">😠</span>
+        <span class="icon " style="">😤</span>
+        <span class="icon " style="">😡</span>
+        <span class="icon " style="">🤬</span>
+    </div>
+</div>
+
+@code
+{
+    public string Comment{ get; set; }
+
+    public bool IsAggressive{ get; set; }
+
+    public string Probability{ get; set; }
+
+    public float valuerange { get; set; } = 0;
+    public string Color { get; set; } = null;
+
+    public void OutPut()
+    {
+
+
+
+        var aggres = AggresiveScore.Predict(Comment);
+
+        var darsad = aggres.Probability * 100;
+        valuerange = darsad;
+        IsAggressive = aggres.Prediction;
+        if (darsad <25)
+        {
+           Color = "bg-success";
+        }
+        if (darsad > 25 && darsad <= 50)
+        {
+            Color = "bg-info";
+        }
+        else
+        {
+            if(darsad >50 && darsad<= 75)
+            {
+                Color = "bg-warning";
+
+            } if(darsad >75 && darsad <= 100)
+            {
+                Color = "bg-danger";
+
+            }
+        }
+
+        Probability =  Math.Ceiling(darsad).ToString() + "%";
+
+      
+
+    }
+}
